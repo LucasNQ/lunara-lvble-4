@@ -8,7 +8,7 @@ interface CollapsibleDescriptionProps {
 }
 
 const CollapsibleDescription = ({ description }: CollapsibleDescriptionProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <Card className="mb-8">

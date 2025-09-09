@@ -157,8 +157,11 @@ const ProductDetailSlug = () => {
                   </div>
                   
                   {/* Installments */}
-                  <div className="text-lg text-gray-600">
-                    ou parcelado em até 12x de R$ {(productOptions.length > 0 ? selectedOption.price / 12 : product.price / 12).toFixed(2).replace('.', ',')} sem juros
+                  <div className="flex items-center gap-2 text-lg text-gray-600">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                    </svg>
+                    parcelado em até 12x
                   </div>
                 </div>
 
@@ -171,16 +174,6 @@ const ProductDetailSlug = () => {
                   Ver Formas de Pagamento
                 </Button>
 
-                {/* PIX Priority Box */}
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg border border-green-200">
-                  <div className="flex items-center gap-3">
-                    <Smartphone className="w-6 h-6 text-green-600" />
-                    <div className="flex-1">
-                      <div className="font-semibold text-green-800">PIX</div>
-                      <div className="text-sm text-green-700">Envio Prioritário ao comprar pelo PIX</div>
-                    </div>
-                  </div>
-                </div>
 
                 {/* Option Selector */}
                 {productOptions.length > 0 && (
@@ -193,16 +186,16 @@ const ProductDetailSlug = () => {
 
                 {/* Main Action Button */}
                 <Button 
-                  onClick={handleDirectPurchase}
+                  onClick={handleAddToCart}
                   className="w-full btn-gradient text-white text-xl py-6 rounded-full font-bold flex items-center justify-center gap-3 shadow-lg"
                 >
-                  <ExternalLink className="w-6 h-6" />
-                  COMPRAR AGORA
+                  <ShoppingCart className="w-6 h-6" />
+                  ADICIONAR AO CARRINHO
                 </Button>
 
                 {/* Payment Methods */}
-                <div className="space-y-3">
-                  <div className="text-center font-semibold text-gray-800">
+                <div className="space-y-2 p-4 rounded-lg shadow-sm bg-white border border-gray-100">
+                  <div className="text-center font-semibold text-gray-800 text-sm">
                     FORMAS DE PAGAMENTO
                   </div>
                   <div className="flex justify-center">
@@ -214,23 +207,6 @@ const ProductDetailSlug = () => {
                   </div>
                 </div>
 
-                {/* Mini Copy */}
-                {product.minicopy && (
-                  <div className="bg-gradient-to-r from-pink-50 to-purple-50 p-4 rounded-lg border border-pink-200">
-                    <p className="text-center font-medium text-gray-700">
-                      {product.minicopy}
-                    </p>
-                  </div>
-                )}
-
-                {/* Extra Info */}
-                {product.extraInfo && (
-                  <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
-                    <p className="text-center text-yellow-800 font-medium text-sm">
-                      {product.extraInfo}
-                    </p>
-                  </div>
-                )}
               </div>
             </div>
           </div>
@@ -243,7 +219,6 @@ const ProductDetailSlug = () => {
         <StickyPurchaseButton
           selectedOption={selectedOption}
           productName={product.name}
-          onDirectPurchase={handleDirectPurchase}
           onAddToCart={handleAddToCart}
         />
 

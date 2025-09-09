@@ -210,7 +210,6 @@ const ProductDetail = () => {
       <StickyPurchaseButton
         selectedOption={selectedOption}
         productName={product.name}
-        onDirectPurchase={handleDirectPurchase}
         onAddToCart={handleAddToCart}
       />
 

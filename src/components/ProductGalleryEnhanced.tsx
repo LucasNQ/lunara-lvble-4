@@ -101,12 +101,6 @@ const ProductGalleryEnhanced = ({ images, productName }: ProductGalleryEnhancedP
             </div>
           )}
 
-          {/* Swipe Indicator for mobile */}
-          {images.length > 1 && (
-            <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs sm:hidden">
-              Deslize ← →
-            </div>
-          )}
         </div>
 
         {/* Thumbnails */}
@@ -143,7 +137,7 @@ const ProductGalleryEnhanced = ({ images, productName }: ProductGalleryEnhancedP
             <Button
               variant="ghost"
               size="icon"
-              className="absolute top-4 right-4 z-50 text-gray-700 hover:bg-gray-100 rounded-full"
+              className="absolute top-4 right-4 z-50 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full w-10 h-10"
               onClick={() => setIsZoomOpen(false)}
             >
               <X className="h-6 w-6" />

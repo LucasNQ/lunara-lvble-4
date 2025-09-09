@@ -137,13 +137,13 @@ const ProductGalleryEnhanced = ({ images, productName }: ProductGalleryEnhancedP
 
       {/* Zoom Modal */}
       <Dialog open={isZoomOpen} onOpenChange={setIsZoomOpen}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95">
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-white">
           <div className="relative w-full h-[95vh] flex items-center justify-center">
             {/* Close Button */}
             <Button
               variant="ghost"
               size="icon"
-              className="absolute top-4 right-4 z-50 text-white hover:bg-white/20 rounded-full"
+              className="absolute top-4 right-4 z-50 text-gray-700 hover:bg-gray-100 rounded-full"
               onClick={() => setIsZoomOpen(false)}
             >
               <X className="h-6 w-6" />
@@ -166,17 +166,11 @@ const ProductGalleryEnhanced = ({ images, productName }: ProductGalleryEnhancedP
               
               {/* Image Counter in Zoom */}
               {images.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-full text-sm">
                   {zoomImageIndex + 1} / {images.length}
                 </div>
               )}
 
-              {/* Swipe Indicator in Zoom */}
-              {images.length > 1 && (
-                <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs sm:hidden">
-                  Deslize ← → para navegar
-                </div>
-              )}
             </div>
 
             {/* Thumbnail Navigation in Zoom */}
@@ -188,8 +182,8 @@ const ProductGalleryEnhanced = ({ images, productName }: ProductGalleryEnhancedP
                     onClick={() => setZoomImageIndex(index)}
                     className={`flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
                       zoomImageIndex === index
-                        ? 'border-white shadow-md'
-                        : 'border-white/40 hover:border-white/60'
+                        ? 'border-gray-800 shadow-md'
+                        : 'border-gray-300 hover:border-gray-500'
                     }`}
                   >
                     <OptimizedImage

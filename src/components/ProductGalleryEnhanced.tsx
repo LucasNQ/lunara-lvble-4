@@ -137,7 +137,7 @@ const ProductGalleryEnhanced = ({ images, productName }: ProductGalleryEnhancedP
             <Button
               variant="ghost"
               size="icon"
-              className="absolute top-4 right-4 z-50 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full w-10 h-10"
+              className="absolute top-4 right-4 z-50 bg-gray-400/80 hover:bg-gray-500/80 text-white rounded-full w-10 h-10"
               onClick={() => setIsZoomOpen(false)}
             >
               <X className="h-6 w-6" />

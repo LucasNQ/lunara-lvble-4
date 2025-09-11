@@ -60,52 +60,74 @@ const CartDrawer = () => {
     <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
       <SheetContent side="right" className="w-[85vw] sm:w-[400px] max-w-[400px] p-0 flex flex-col">
         <SheetHeader className="px-4 pb-2 border-b flex-shrink-0">
-          <SheetTitle className="text-base font-bold flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5" />
-            {cartItems.length} {cartItems.length === 1 ? 'Item' : 'Itens'}
-          </SheetTitle>
+          <div className="flex items-center justify-between">
+            <SheetTitle className="text-base font-bold flex items-center gap-2">
+              <ShoppingBag className="w-5 h-5" />
+              {cartItems.length} {cartItems.length === 1 ? 'Item' : 'Itens'}
+            </SheetTitle>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsDrawerOpen(false)}
+              className="h-8 w-8 text-black hover:bg-gray-100"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </Button>
+          </div>
+          <p className="text-xs text-gray-600 mt-1">A finalização da compra é feita individualmente para cada produto.</p>
         </SheetHeader>
         
         <div className="flex-1 overflow-y-auto px-4 py-2">
           {cartItems.map((item) => (
             <div key={item.id} className="py-3 border-b last:border-b-0">
-              {/* Product Info */}
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-14 h-14 flex-shrink-0">
-                  <OptimizedImage
-                    src={item.image}
-                    alt={`${item.name} - Produto no carrinho`}
-                    className="w-full h-full object-contain rounded-lg bg-gray-50"
-                    width={56}
-                    height={56}
-                  />
-                </div>
-                
-                 <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-sm leading-tight mb-1 break-words">
-                    {item.name}
-                  </h3>
-                  <div className="flex items-center gap-2 mb-1">
-                    <p className="text-red-600 font-bold text-base">
-                      R$ {item.price.toFixed(2).replace('.', ',')}
-                    </p>
-                    <p className="text-gray-500 text-sm line-through">
-                      R$ {item.originalPrice.toFixed(2).replace('.', ',')}
-                    </p>
-                  </div>
-                  <p className="text-gray-600 text-xs">Qtd: 1</p>
-                </div>
-                
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8 text-red-500 hover:text-red-700 hover:bg-red-50 flex-shrink-0"
-                  onClick={() => removeFromCart(item.id)}
-                >
-                  <Trash2 className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
+               {/* Product Info */}
+               <div className="flex items-start gap-3 mb-3">
+                 <div className="w-14 h-14 flex-shrink-0">
+                   <OptimizedImage
+                     src={item.image}
+                     alt={`${item.name} - Produto no carrinho`}
+                     className="w-full h-full object-contain rounded-lg bg-gray-50"
+                     width={56}
+                     height={56}
+                   />
+                 </div>
+                 
+                  <div className="flex-1 min-w-0">
+                   <h3 className="font-semibold text-sm leading-tight mb-1 break-words">
+                     {item.name}
+                   </h3>
+                   <div className="flex items-center gap-2 mb-1">
+                     <p className="text-red-600 font-bold text-base">
+                       R$ {item.price.toFixed(2).replace('.', ',')}
+                     </p>
+                     <p className="text-gray-500 text-sm line-through">
+                       R$ {item.originalPrice.toFixed(2).replace('.', ',')}
+                     </p>
+                   </div>
+                   <p className="text-gray-600 text-xs">Qtd: 1</p>
+                 </div>
+                 
+                 <Button
+                   variant="ghost"
+                   size="icon"
+                   className="h-8 w-8 text-red-500 hover:text-red-700 hover:bg-red-50 flex-shrink-0"
+                   onClick={() => removeFromCart(item.id)}
+                 >
+                   <Trash2 className="h-4 w-4" />
+                 </Button>
+               </div>
+               
+               {/* Individual Checkout Button */}
+               <Button
+                 onClick={() => handleCoinzzCheckout(item.id, item.name)}
+                 className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-2 text-xs font-bold rounded-lg flex items-center justify-center gap-2 mb-2"
+               >
+                 <Lock className="w-3 h-3" />
+                 FINALIZAR COMPRA
+               </Button>
+             </div>
           ))}
 
           {/* Collapsible Delivery Info */}
@@ -139,14 +161,6 @@ const CartDrawer = () => {
         
         <SheetFooter className="px-4 pb-4 border-t bg-gray-50 flex-shrink-0">
           <div className="space-y-3 w-full">            
-            <Button
-              onClick={handleFinalizarCompra}
-              className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-3 text-sm font-bold rounded-lg flex items-center justify-center gap-2"
-            >
-              <Lock className="w-4 h-4" />
-              FINALIZAR COMPRA
-            </Button>
-            
             <Button
               onClick={() => setIsDrawerOpen(false)}
               variant="outline"

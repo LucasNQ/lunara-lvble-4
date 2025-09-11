@@ -156,24 +156,24 @@ const ProductDetailSlug = () => {
                     </Badge>
                   </div>
                   
-                {/* Installments */}
-                <div className="flex items-center gap-2 text-lg text-gray-600">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
-                  </svg>
-                  parcelado em até 12x
-                </div>
-                </div>
+                 {/* Installments */}
+                 <div className="flex items-center gap-2 text-lg text-gray-600 mb-2">
+                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                     <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                   </svg>
+                   parcelado em até 12x
+                 </div>
+                 </div>
 
-                {/* Payment Options Button */}
-                <Button 
-                  variant="outline"
-                  onClick={() => setIsPaymentModalOpen(true)}
-                  className="w-auto border border-gray-400 text-gray-600 hover:bg-gray-50 rounded-md font-normal py-2 px-3 text-sm flex items-center gap-2"
-                >
-                  <span className="text-lg">+</span>
-                  Formas de Pagamento
-                </Button>
+                 {/* Payment Options Button */}
+                 <Button 
+                   variant="outline"
+                   onClick={() => setIsPaymentModalOpen(true)}
+                   className="w-auto border border-gray-400 text-black hover:bg-gray-50 rounded-md font-normal py-1 px-3 text-sm flex items-center gap-2"
+                 >
+                   <span className="text-lg">+</span>
+                   Formas de Pagamento
+                 </Button>
 
 
                 {/* Option Selector */}

@@ -32,11 +32,11 @@ const StickyPurchaseButton = ({
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg p-4 animate-slide-in-bottom">
+    <div className="fixed bottom-4 left-4 right-4 z-50 animate-slide-in-bottom">
       <div className="container mx-auto max-w-6xl">
         <Button 
           onClick={onAddToCart}
-          className="w-full btn-gradient text-white text-xl py-6 rounded-full font-bold flex items-center justify-center gap-3 shadow-lg"
+          className="w-full btn-gradient text-white text-xl py-6 rounded-lg font-bold flex items-center justify-center gap-3 shadow-lg"
         >
           <ShoppingCart className="w-6 h-6" />
           ADICIONAR AO CARRINHO

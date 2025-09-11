@@ -169,9 +169,10 @@ const ProductDetailSlug = () => {
                 <Button 
                   variant="outline"
                   onClick={() => setIsPaymentModalOpen(true)}
-                  className="w-full border-2 border-blue-500 text-blue-600 hover:bg-blue-50 rounded-lg font-semibold py-3"
+                  className="w-auto border border-gray-400 text-gray-600 hover:bg-gray-50 rounded-md font-normal py-2 px-3 text-sm flex items-center gap-2"
                 >
-                  Ver Formas de Pagamento
+                  <span className="text-lg">+</span>
+                  Formas de Pagamento
                 </Button>
 
 
@@ -187,7 +188,7 @@ const ProductDetailSlug = () => {
                 {/* Main Action Button */}
                 <Button 
                   onClick={handleAddToCart}
-                  className="w-full btn-gradient text-white text-xl py-6 rounded-full font-bold flex items-center justify-center gap-3 shadow-lg"
+                  className="w-full btn-gradient text-white text-xl py-6 rounded-lg font-bold flex items-center justify-center gap-3 shadow-lg"
                 >
                   <ShoppingCart className="w-6 h-6" />
                   ADICIONAR AO CARRINHO

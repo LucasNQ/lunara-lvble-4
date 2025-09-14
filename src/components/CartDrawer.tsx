@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { Trash2, ShoppingBag, ChevronDown, ChevronUp, Lock, ArrowLeft } from 'lucide-react';
+import { Trash2, ShoppingBag, ChevronDown, ChevronUp, Lock, ArrowLeft, X } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { productCheckoutLinks } from '@/config/checkoutLinks';
@@ -40,14 +40,25 @@ const CartDrawer = () => {
     return (
       <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
         <SheetContent side="right" className="w-[85vw] sm:w-[400px] max-w-[400px] p-0">
-          <SheetHeader className="px-4 py-3 border-b">
-            <SheetTitle>Seu Carrinho</SheetTitle>
+          <SheetHeader className="px-4 py-3 border-b flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <ShoppingBag className="w-5 h-5" />
+              <SheetTitle>Carrinho</SheetTitle>
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
+              onClick={() => setIsDrawerOpen(false)}
+            >
+              <X className="h-6 w-6 font-bold stroke-[2.5]" />
+            </Button>
           </SheetHeader>
           <div className="flex flex-col items-center justify-center py-8 px-4 h-full">
             <p className="text-lg text-gray-600 text-center mb-6">
               Seu carrinho está vazio
             </p>
-            <Button onClick={() => setIsDrawerOpen(false)} className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white rounded-lg px-8 py-3 text-sm font-bold">
+            <Button onClick={() => setIsDrawerOpen(false)} className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white rounded-lg px-12 py-4 text-base font-bold">
               COMECE A COMPRAR
             </Button>
           </div>
@@ -59,12 +70,19 @@ const CartDrawer = () => {
   return (
     <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
       <SheetContent side="right" className="w-[85vw] sm:w-[400px] max-w-[400px] p-0 flex flex-col" hideCloseButton={true}>
-        <SheetHeader className="px-4 pb-2 border-b flex-shrink-0">
+        <SheetHeader className="px-4 pb-2 border-b flex-shrink-0 flex items-center justify-between">
           <SheetTitle className="text-base font-bold flex items-center gap-2">
             <ShoppingBag className="w-5 h-5" />
             {cartItems.length} {cartItems.length === 1 ? 'Item' : 'Itens'}
           </SheetTitle>
-          <p className="text-xs text-gray-600 mt-1">A finalização da compra é feita individualmente para cada produto.</p>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-8 w-8 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
+            onClick={() => setIsDrawerOpen(false)}
+          >
+            <X className="h-6 w-6 font-bold stroke-[2.5]" />
+          </Button>
         </SheetHeader>
         
         <div className="flex-1 overflow-y-auto px-4 py-2">
@@ -148,7 +166,8 @@ const CartDrawer = () => {
         </div>
         
         <SheetFooter className="px-4 pb-4 border-t bg-gray-50 flex-shrink-0">
-          <div className="space-y-3 w-full">            
+          <div className="space-y-3 w-full">
+            <p className="text-sm text-gray-600 text-center">A finalização da compra é feita individualmente para cada produto.</p>
             <Button
               onClick={() => setIsDrawerOpen(false)}
               variant="outline"

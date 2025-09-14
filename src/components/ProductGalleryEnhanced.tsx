@@ -105,26 +105,28 @@ const ProductGalleryEnhanced = ({ images, productName }: ProductGalleryEnhancedP
 
         {/* Thumbnails */}
         {images.length > 1 && (
-          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-2 px-2">
-            {images.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedImageIndex(index)}
-                className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
-                  selectedImageIndex === index
-                    ? 'border-primary shadow-md'
-                    : 'border-gray-200 hover:border-gray-300'
-                }`}
-              >
-                <OptimizedImage
-                  src={image}
-                  alt={`${productName} - Miniatura ${index + 1}`}
-                  className="w-full h-full object-cover"
-                  width={64}
-                  height={64}
-                />
-              </button>
-            ))}
+          <div className="w-full overflow-hidden">
+            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              {images.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedImageIndex(index)}
+                  className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                    selectedImageIndex === index
+                      ? 'border-primary shadow-md'
+                      : 'border-gray-200 hover:border-gray-300'
+                  }`}
+                >
+                  <OptimizedImage
+                    src={image}
+                    alt={`${productName} - Miniatura ${index + 1}`}
+                    className="w-full h-full object-cover"
+                    width={64}
+                    height={64}
+                  />
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>

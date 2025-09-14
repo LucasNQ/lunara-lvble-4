@@ -39,7 +39,7 @@ const CartDrawer = () => {
   if (cartItems.length === 0) {
     return (
       <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-        <SheetContent side="right" className="w-[85vw] sm:w-[400px] max-w-[400px] p-0">
+        <SheetContent side="right" className="w-[85vw] sm:w-[400px] max-w-[400px] p-0" hideCloseButton={true}>
           <SheetHeader className="px-4 py-3 border-b flex items-center justify-between">
             <div className="flex items-center gap-2">
               <ShoppingBag className="w-5 h-5" />
@@ -48,17 +48,20 @@ const CartDrawer = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="h-8 w-8 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
+              className="h-10 w-10 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
               onClick={() => setIsDrawerOpen(false)}
             >
-              <X className="h-6 w-6 font-bold stroke-[2.5]" />
+              <X className="h-7 w-7 stroke-[3]" />
             </Button>
           </SheetHeader>
           <div className="flex flex-col items-center justify-center py-8 px-4 h-full">
-            <p className="text-lg text-gray-600 text-center mb-6">
+            <p className="text-xl text-gray-600 text-center mb-8">
               Seu carrinho está vazio
             </p>
-            <Button onClick={() => setIsDrawerOpen(false)} className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white rounded-lg px-12 py-4 text-base font-bold">
+            <Button 
+              onClick={() => setIsDrawerOpen(false)} 
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white rounded-lg px-16 py-6 text-lg font-bold"
+            >
               COMECE A COMPRAR
             </Button>
           </div>
@@ -78,10 +81,10 @@ const CartDrawer = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="h-8 w-8 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
+            className="h-10 w-10 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
             onClick={() => setIsDrawerOpen(false)}
           >
-            <X className="h-6 w-6 font-bold stroke-[2.5]" />
+            <X className="h-7 w-7 stroke-[3]" />
           </Button>
         </SheetHeader>
         
@@ -167,7 +170,7 @@ const CartDrawer = () => {
         
         <SheetFooter className="px-4 pb-4 border-t bg-gray-50 flex-shrink-0">
           <div className="space-y-3 w-full">
-            <p className="text-sm text-gray-600 text-center">A finalização da compra é feita individualmente para cada produto.</p>
+            <p className="text-base text-gray-600 text-center font-medium">A finalização da compra é feita individualmente para cada produto.</p>
             <Button
               onClick={() => setIsDrawerOpen(false)}
               variant="outline"

@@ -105,8 +105,15 @@ const ProductGalleryEnhanced = ({ images, productName }: ProductGalleryEnhancedP
 
         {/* Thumbnails */}
         {images.length > 1 && (
-          <div className="w-full overflow-hidden">
-            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <div className="w-full">
+            <div 
+              className="flex gap-2 overflow-x-auto pb-2 flex-nowrap scrollbar-hide"
+              style={{ 
+                scrollbarWidth: 'none', 
+                msOverflowStyle: 'none',
+                WebkitOverflowScrolling: 'touch'
+              }}
+            >
               {images.map((image, index) => (
                 <button
                   key={index}

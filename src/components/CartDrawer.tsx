@@ -60,22 +60,10 @@ const CartDrawer = () => {
     <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
       <SheetContent side="right" className="w-[85vw] sm:w-[400px] max-w-[400px] p-0 flex flex-col">
         <SheetHeader className="px-4 pb-2 border-b flex-shrink-0">
-          <div className="flex items-center justify-between">
-            <SheetTitle className="text-base font-bold flex items-center gap-2">
-              <ShoppingBag className="w-5 h-5" />
-              {cartItems.length} {cartItems.length === 1 ? 'Item' : 'Itens'}
-            </SheetTitle>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsDrawerOpen(false)}
-              className="h-8 w-8 text-black hover:bg-gray-100"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </Button>
-          </div>
+          <SheetTitle className="text-base font-bold flex items-center gap-2">
+            <ShoppingBag className="w-5 h-5" />
+            {cartItems.length} {cartItems.length === 1 ? 'Item' : 'Itens'}
+          </SheetTitle>
           <p className="text-xs text-gray-600 mt-1">A finalização da compra é feita individualmente para cada produto.</p>
         </SheetHeader>
         

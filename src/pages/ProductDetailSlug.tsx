@@ -169,7 +169,7 @@ const ProductDetailSlug = () => {
                   <Button 
                     variant="outline"
                     onClick={() => setIsPaymentModalOpen(true)}
-                    className="w-auto border border-gray-400 text-black hover:bg-gray-50 rounded-md font-normal py-0.5 px-3 text-sm flex items-center gap-2"
+                    className="w-auto border border-gray-400 text-black hover:bg-gray-50 rounded-md font-normal py-[0.18rem] px-3 text-sm flex items-center gap-2 mt-[0.6rem]"
                   >
                     <span className="text-lg">+</span>
                     Formas de Pagamento

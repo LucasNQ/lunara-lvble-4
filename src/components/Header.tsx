@@ -71,9 +71,34 @@ const Header = () => {
       isScrolled ? 'glass-effect shadow-lg' : 'glass-effect'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20 sm:h-24 md:h-28">
-          {/* Logo */}
-          <div className="flex-shrink-0">
+        <div className="grid grid-cols-3 items-center h-20 sm:h-24 md:h-28">
+          {/* Left Column - Mobile Menu / Desktop Navigation */}
+          <div className="flex items-center justify-start">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-gray-700 hover:text-pink-500 transition-colors flex-shrink-0 lg:hidden"
+              aria-label="Menu"
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+              {menuItems.map((item) => (
+                <button
+                  key={item.label}
+                  onClick={() => handleMenuItemClick(item.href)}
+                  className="text-gray-700 hover:text-pink-500 transition-colors duration-300 font-medium text-sm xl:text-base whitespace-nowrap"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          {/* Center Column - Logo */}
+          <div className="flex justify-center">
             <button 
               onClick={() => navigate('/')}
               className="hover:opacity-80 transition-opacity"
@@ -86,21 +111,9 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
-            {menuItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => handleMenuItemClick(item.href)}
-                className="text-gray-700 hover:text-pink-500 transition-colors duration-300 font-medium text-sm xl:text-base whitespace-nowrap"
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
-
-          {/* Cart and CTA - Desktop */}
-          <div className="hidden lg:flex items-center space-x-2 xl:space-x-3">
+          {/* Right Column - Cart and CTA */}
+          <div className="flex items-center justify-end">
+            {/* Cart Button */}
             <button 
               onClick={handleCartClick}
               className="relative p-2 text-gray-700 hover:text-pink-500 transition-colors flex-shrink-0"
@@ -113,35 +126,14 @@ const Header = () => {
                 </span>
               )}
             </button>
+            
+            {/* Desktop CTA Button */}
             <Button 
               onClick={scrollToProducts}
-              className="btn-gradient text-white px-3 py-2 xl:px-4 xl:py-2 rounded-full font-semibold text-sm xl:text-base whitespace-nowrap"
+              className="hidden lg:block btn-gradient text-white px-3 py-2 xl:px-4 xl:py-2 rounded-full font-semibold text-sm xl:text-base whitespace-nowrap ml-2 xl:ml-3"
             >
               Compre Agora
             </Button>
-          </div>
-
-          {/* Mobile cart and menu button */}
-          <div className="flex items-center space-x-1 lg:hidden">
-            <button 
-              onClick={handleCartClick}
-              className="relative p-2 text-gray-700 hover:text-pink-500 transition-colors flex-shrink-0"
-              aria-label="Carrinho de compras"
-            >
-              <ShoppingCart className="h-5 w-5" />
-              {getTotalItems() > 0 && (
-                <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center font-medium">
-                  {getTotalItems()}
-                </span>
-              )}
-            </button>
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-gray-700 hover:text-pink-500 transition-colors flex-shrink-0"
-              aria-label="Menu"
-            >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
           </div>
         </div>
 

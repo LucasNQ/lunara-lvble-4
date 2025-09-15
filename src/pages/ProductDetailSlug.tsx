@@ -140,7 +140,7 @@ const ProductDetailSlug = () => {
                   </div>
 
                   {/* Payment Options Button */}
-                  <Button variant="outline" onClick={() => setIsPaymentModalOpen(true)} className="w-auto border border-gray-400 text-black hover:bg-gray-50 rounded-md font-normal text-sm flex items-center gap-2 mt-[0.6rem] py-[1.33px] px-[12px] mx-0 my-0">
+                  <Button variant="outline" onClick={() => setIsPaymentModalOpen(true)} className="w-auto border border-gray-400 text-black hover:bg-gray-50 rounded-md font-normal text-sm flex items-center gap-2 mt-[0.36rem] py-[0.8px] px-[12px] mx-0 my-0">
                     <span className="text-lg">+</span>
                     Formas de Pagamento
                   </Button>

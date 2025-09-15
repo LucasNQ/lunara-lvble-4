@@ -40,19 +40,21 @@ const CartDrawer = () => {
     return (
       <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
         <SheetContent side="right" className="w-[85vw] sm:w-[400px] max-w-[400px] p-0" hideCloseButton={true}>
-          <SheetHeader className="px-4 py-3 border-b flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <ShoppingBag className="w-5 h-5" />
-              <SheetTitle>Carrinho</SheetTitle>
+          <SheetHeader className="px-4 py-3 border-b">
+            <div className="flex items-center justify-between w-full">
+              <div className="flex items-center gap-2">
+                <ShoppingBag className="w-5 h-5" />
+                <SheetTitle>Carrinho</SheetTitle>
+              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-10 w-10 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
+                onClick={() => setIsDrawerOpen(false)}
+              >
+                <X className="h-7 w-7 stroke-[3] font-bold" />
+              </Button>
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-10 w-10 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
-              onClick={() => setIsDrawerOpen(false)}
-            >
-              <X className="h-7 w-7 stroke-[3]" />
-            </Button>
           </SheetHeader>
           <div className="flex flex-col items-center justify-center py-8 px-4 h-full">
             <p className="text-xl text-gray-600 text-center mb-8">
@@ -73,19 +75,21 @@ const CartDrawer = () => {
   return (
     <Sheet open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
       <SheetContent side="right" className="w-[85vw] sm:w-[400px] max-w-[400px] p-0 flex flex-col" hideCloseButton={true}>
-        <SheetHeader className="px-4 pb-2 border-b flex-shrink-0 flex items-center justify-between">
-          <SheetTitle className="text-base font-bold flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5" />
-            {cartItems.length} {cartItems.length === 1 ? 'Item' : 'Itens'}
-          </SheetTitle>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="h-10 w-10 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
-            onClick={() => setIsDrawerOpen(false)}
-          >
-            <X className="h-7 w-7 stroke-[3]" />
-          </Button>
+        <SheetHeader className="px-4 pb-2 border-b flex-shrink-0">
+          <div className="flex items-center justify-between w-full">
+            <SheetTitle className="text-base font-bold flex items-center gap-2">
+              <ShoppingBag className="w-5 h-5" />
+              {cartItems.length} {cartItems.length === 1 ? 'Item' : 'Itens'}
+            </SheetTitle>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-10 w-10 text-black hover:text-black hover:bg-gray-100 flex-shrink-0"
+              onClick={() => setIsDrawerOpen(false)}
+            >
+              <X className="h-7 w-7 stroke-[3] font-bold" />
+            </Button>
+          </div>
         </SheetHeader>
         
         <div className="flex-1 overflow-y-auto px-4 py-2">

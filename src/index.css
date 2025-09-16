@@ -373,7 +373,7 @@
   }
   /* Sticky button animations */
   .animate-slide-in-bottom {
-    animation: slideInBottom 0.3s ease-out;
+    animation: slideInBottom 0.15s ease-out;
   }
 
   @keyframes slideInBottom {

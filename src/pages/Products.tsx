@@ -78,9 +78,6 @@ const Products = () => {
                     `}
                   >
                     <span className="relative z-10">{category}</span>
-                    {selectedCategory === category && (
-                      <div className="absolute inset-x-0 bottom-0 h-0.5 bg-white/30 rounded-full" />
-                    )}
                   </button>
                 ))}
               </div>

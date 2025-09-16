@@ -53,7 +53,6 @@ const Products = () => {
                 Todos os <span className="text-gradient">Produtos</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl">
-                💖Sua rotina de beleza começa aqui!<br />
                 Garanta já os queridinhos que transformaram a vida de milhares de mulheres.
               </p>
             </div>

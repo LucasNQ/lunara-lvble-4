@@ -18,11 +18,11 @@ const StickyPurchaseButton = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show button when user scrolls past half of the page content
+      // Show button when user scrolls past quarter of the page content
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrollPercentage = scrollTop / documentHeight;
-      setIsVisible(scrollPercentage > 0.5);
+      setIsVisible(scrollPercentage > 0.25);
     };
 
     window.addEventListener('scroll', handleScroll);

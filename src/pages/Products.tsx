@@ -69,12 +69,11 @@ const Products = () => {
                     onClick={() => setSelectedCategory(category)}
                     className={`
                       relative px-3 py-2 md:px-6 md:py-3 text-xs md:text-sm font-bold rounded-full transition-all duration-300 ease-in-out
-                      md:hover:scale-105 md:hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2
+                      md:hover:scale-105 md:hover:shadow-lg focus:outline-none
                       ${selectedCategory === category 
                         ? 'btn-gradient text-white shadow-lg md:transform md:scale-105' 
                         : 'bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white/90 md:hover:bg-white border border-gray-200 hover:border-pink-300 md:hover:border-gray-300 shadow-sm hover:shadow-md'
                       }
-                      ${selectedCategory === category ? 'focus:ring-pink-500' : 'focus:ring-gray-300'}
                     `}
                   >
                     <span className="relative z-10">{category}</span>

@@ -57,7 +57,8 @@ const ProductDetailSlug = () => {
       ...product,
       name: selectedOption.label,
       price: selectedOption.price,
-      originalPrice: selectedOption.originalPrice
+      originalPrice: selectedOption.originalPrice,
+      checkoutLink: selectedOption.checkoutLink
     };
     addToCart(productToAdd);
   };

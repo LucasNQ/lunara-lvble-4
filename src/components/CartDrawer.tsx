@@ -12,13 +12,14 @@ const CartDrawer = () => {
   const { cartItems, removeFromCart, getTotalPrice, clearCart, isDrawerOpen, setIsDrawerOpen } = useCart();
   const [isDeliveryInfoOpen, setIsDeliveryInfoOpen] = useState(false);
 
-  const handleCoinzzCheckout = (productId: number, productName: string) => {
-    const link = productCheckoutLinks[productId]?.coinzz;
+  const handleCoinzzCheckout = (item: any) => {
+    // Use the saved checkout link from the cart item, or fallback to the original system
+    const link = item.checkoutLink || productCheckoutLinks[item.id]?.coinzz;
     if (link) {
       window.open(link, '_blank');
       toast({
         title: "Redirecionando para checkout...",
-        description: `Finalizando compra do produto: ${productName}`,
+        description: `Finalizando compra do produto: ${item.name}`,
       });
     } else {
       toast({
@@ -32,7 +33,7 @@ const CartDrawer = () => {
   const handleFinalizarCompra = () => {
     // For now, use the first item's checkout link since it's per item
     if (cartItems.length > 0) {
-      handleCoinzzCheckout(cartItems[0].id, cartItems[0].name);
+      handleCoinzzCheckout(cartItems[0]);
     }
   };
 
@@ -133,13 +134,13 @@ const CartDrawer = () => {
                </div>
                
                {/* Individual Checkout Button */}
-               <Button
-                 onClick={() => handleCoinzzCheckout(item.id, item.name)}
-                 className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-2 text-xs font-bold rounded-lg flex items-center justify-center gap-2 mb-2"
-               >
-                 <Lock className="w-3 h-3" />
-                 FINALIZAR COMPRA
-               </Button>
+                <Button
+                  onClick={() => handleCoinzzCheckout(item)}
+                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-2 text-xs font-bold rounded-lg flex items-center justify-center gap-2 mb-2"
+                >
+                  <Lock className="w-3 h-3" />
+                  FINALIZAR COMPRA
+                </Button>
              </div>
           ))}
 

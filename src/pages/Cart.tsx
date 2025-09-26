@@ -7,7 +7,7 @@ import FloatingWhatsAppButton from '@/components/FloatingWhatsAppButton';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip';
 import { Trash2, ShoppingBag, ArrowLeft, Info } from 'lucide-react';
-import { useCart } from '@/contexts/CartContext';
+import { useCart, CartItem } from '@/contexts/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { productCheckoutLinks } from '@/config/checkoutLinks';
 import OptimizedImage from '@/components/OptimizedImage';
@@ -23,13 +23,14 @@ const Cart = () => {
   const [openTooltips, setOpenTooltips] = useState<{[key: number]: boolean}>({});
 
 
-  const handleCoinzzCheckout = (productId: number, productName: string) => {
-    const link = productCheckoutLinks[productId]?.coinzz;
+  const handleCoinzzCheckout = (item: CartItem) => {
+    // Use the saved checkout link from the cart item, or fallback to the original system
+    const link = item.checkoutLink || productCheckoutLinks[item.id]?.coinzz;
     if (link) {
       window.open(link, '_blank');
       toast({
         title: "Redirecionando para checkout...",
-        description: `Finalizando compra do produto: ${productName}`
+        description: `Finalizando compra do produto: ${item.name}`
       });
     } else {
       toast({
@@ -160,10 +161,10 @@ const Cart = () => {
 
                           {/* Checkout Button for this product */}
                           <div>
-                            {links?.coinzz ? (
+                            {links?.coinzz || item.checkoutLink ? (
                               <div>
                                 <Button 
-                                  onClick={() => handleCoinzzCheckout(item.id, item.name)} 
+                                  onClick={() => handleCoinzzCheckout(item)} 
                                   className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-3 text-sm sm:text-base font-bold rounded-lg touch-manipulation border-2 border-pink-400 shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200 animate-pulse"
                                 >
                                   {isDepiladorLaserFlex ? 'Finalizar Compra' : 'Finalizar Compra'}

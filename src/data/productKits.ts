@@ -92,24 +92,26 @@ export const productKits: Record<number, ProductOption[]> = {
       label: "1 Kit SOS Crescimento (30 dias)",
       price: 179.00,
       originalPrice: 229.00,
-      checkoutLink: 'https://pay.braip.co/ref?pl=pla4kw4v&ck=cheon6kw&af=afig57gg5o'
+      discount: "Economia de R$ 50,00",
+      checkoutLink: 'https://ev.braip.com/ref?pl=pla4kw4v&ck=cheon6kw&af=afig57gg5o'
     },
     {
       id: "2-kits",
       label: "2 Kits SOS Crescimento (60 dias)",
-      price: 320.00,
-      originalPrice: 458.00,
-      discount: "Economia de R$ 138,00",
-      popular: true,
-      checkoutLink: 'https://pay.braip.co/ref?pl=pla4kw4v2&ck=cheon6kw&af=afig57gg5o'
+      price: 279.00,
+      originalPrice: 307.00,
+      discount: "Economia de R$ 28,00",
+      checkoutLink: 'https://ev.braip.com/ref?pl=pla1nwn1&ck=cheon6kw&af=afig57gg5o'
     },
     {
       id: "3-kits",
-      label: "3 Kits SOS Crescimento (90 dias) + Bônus",
-      price: 450.00,
-      originalPrice: 687.00,
-      discount: "Economia de R$ 237,00 + Bônus Exclusivos",
-      checkoutLink: 'https://pay.braip.co/ref?pl=pla4kw4v3&ck=cheon6kw&af=afig57gg5o'
+      label: "2 Kits SOS Crescimento (80 dias) + Shampoo, Tônico e Óleo de Brinde",
+      price: 299.00,
+      originalPrice: 345.00,
+      discount: "Economia de R$ 46,00",
+      badge: "Combo Promocional",
+      badgeColor: "orange",
+      checkoutLink: 'https://ev.braip.com/ref?pl=pla0wk4m&ck=cheon6kw&af=afig57gg5o'
     }
   ],
 

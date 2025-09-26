@@ -18,6 +18,7 @@ export interface Product {
   minicopy?: string;
   customButtonText?: string;
   extraInfo?: string;
+  checkoutLink?: string;
 }
 
 export interface CartItem extends Product {

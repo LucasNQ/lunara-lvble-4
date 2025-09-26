@@ -10,6 +10,8 @@ export interface ProductOption {
   discount?: string;
   popular?: boolean;
   checkoutLink: string;
+  badge?: string;
+  badgeColor?: string;
 }
 
 interface ProductQuantitySelectorProps {

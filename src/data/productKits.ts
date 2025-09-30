@@ -119,27 +119,29 @@ export const productKits: Record<number, ProductOption[]> = {
   13: [
     {
       id: "1-unit",
-      label: "1 Rosa Amazônica Sérum",
+      label: "1x Rosa Amazônica (1 Mês de Tratamento)",
       price: 197.00,
-      originalPrice: 247.00,
-      checkoutLink: 'https://pay.braip.co/ref?pl=plazl6do&ck=chezlmgr&af=afie0488o8'
+      originalPrice: 227.00,
+      discount: "Economia de R$ 30,00",
+      checkoutLink: 'https://ev.braip.com/ref?pl=plazl6do&ck=chezlmgr&af=afie0488o8'
     },
     {
       id: "2-units",
-      label: "Leve 2, Pague 1 - 2 Séruns Rosa Amazônica",
+      label: "2x Rosa Amazônica (2 Meses de Tratamento)",
       price: 197.00,
-      originalPrice: 494.00,
-      discount: "OFERTA RELÂMPAGO: Leve 2, Pague 1",
-      popular: true,
-      checkoutLink: 'https://pay.braip.co/ref?pl=plazl6do2&ck=chezlmgr&af=afie0488o8'
+      originalPrice: 297.00,
+      discount: "Economia de R$ 100,00",
+      badge: "Oferta limitada",
+      badgeColor: "bg-red-500",
+      checkoutLink: 'https://ev.braip.com/ref?pl=plamoxem&ck=chezlmgr&af=afie0488o8'
     },
     {
-      id: "kit-beleza",
-      label: "Kit Beleza Completa: 3 Séruns + Kit Cuidados",
-      price: 350.00,
-      originalPrice: 650.00,
-      discount: "Economia de R$ 300,00 + Kit Cuidados Grátis",
-      checkoutLink: 'https://pay.braip.co/ref?pl=plazl6dokit&ck=chezlmgr&af=afie0488o8'
+      id: "5-units",
+      label: "5x Rosa Amazônica (5 Meses de Tratamento)",
+      price: 397.00,
+      originalPrice: 459.90,
+      discount: "Economia de R$ 62,90",
+      checkoutLink: 'https://ev.braip.com/ref?pl=plalyrxk&ck=chezlmgr&af=afie0488o8'
     }
   ],
 
@@ -147,27 +149,29 @@ export const productKits: Record<number, ProductOption[]> = {
   14: [
     {
       id: "1-month",
-      label: "1 Frasco - 30 dias (60 cápsulas)",
+      label: "1x Amora Miúra + VIT (1 Mês de Tratamento)",
       price: 97.90,
       originalPrice: 137.90,
-      checkoutLink: 'https://pay.braip.co/ref?pl=playy0kk&ck=cheyn1wv&af=afie0me6g9'
+      discount: "Economia de R$ 40,00",
+      checkoutLink: 'https://ev.braip.com/ref?pl=playy0kk&ck=cheyn1wv&af=afie0me6g9'
+    },
+    {
+      id: "2-months",
+      label: "2x Amora Miúra + VIT (2 Meses de Tratamento)",
+      price: 97.90,
+      originalPrice: 157.90,
+      discount: "Economia de R$ 60,00",
+      badge: "Compre 1,Leve 2",
+      badgeColor: "bg-orange-500",
+      checkoutLink: 'https://ev.braip.com/ref?pl=pla9p0nq&ck=cheyn1wv&af=afie0me6g9'
     },
     {
       id: "3-months",
-      label: "3 Frascos - 90 dias (Tratamento Completo)",
+      label: "3x Amora Miúra + VIT (3 Meses de Tratamento)",
       price: 187.90,
-      originalPrice: 413.70,
-      discount: "Economia de R$ 225,80",
-      popular: true,
-      checkoutLink: 'https://pay.braip.co/ref?pl=playy0kk3&ck=cheyn1wv&af=afie0me6g9'
-    },
-    {
-      id: "6-months",
-      label: "6 Frascos - 180 dias (Resultado Garantido)",
-      price: 297.90,
-      originalPrice: 827.40,
-      discount: "Economia de R$ 529,50 + Garantia Estendida",
-      checkoutLink: 'https://pay.braip.co/ref?pl=playy0kk6&ck=cheyn1wv&af=afie0me6g9'
+      originalPrice: 219.99,
+      discount: "Economia de R$ 32,09",
+      checkoutLink: 'https://ev.braip.com/ref?pl=plarg8k8&ck=cheyn1wv&af=afie0me6g9'
     }
   ]
 };

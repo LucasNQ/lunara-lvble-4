@@ -40,19 +40,28 @@ const ProductOptionSelector = ({ options, selectedOption, onOptionChange }: Prod
                   </span>
                 </div>
               </div>
-              {selectedOption.popular && (
-                <Badge className="bg-orange-500 text-white">Mais Popular</Badge>
-              )}
+              <div className="flex flex-col gap-1">
+                {selectedOption.popular && (
+                  <Badge className="bg-orange-500 text-white">Mais Popular</Badge>
+                )}
+                {selectedOption.badge && (
+                  <Badge className={`${selectedOption.badgeColor} text-white`}>{selectedOption.badge}</Badge>
+                )}
+              </div>
             </div>
           </SelectValue>
         </SelectTrigger>
         
-        <SelectContent className="w-full">
+        <SelectContent className="w-full bg-white">
           {options.map((option) => (
-            <SelectItem key={option.id} value={option.id} className="p-4">
+            <SelectItem 
+              key={option.id} 
+              value={option.id} 
+              className="p-4 data-[state=checked]:bg-pink-100 data-[state=checked]:font-semibold focus:bg-pink-50"
+            >
               <div className="w-full">
-                <div className="flex items-center justify-between">
-                  <div className="text-left">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="text-left flex-1">
                     <div className="font-semibold">{option.label}</div>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-lg font-bold text-pink-600">
@@ -68,9 +77,14 @@ const ProductOptionSelector = ({ options, selectedOption, onOptionChange }: Prod
                       </div>
                     )}
                   </div>
-                  {option.popular && (
-                    <Badge className="bg-orange-500 text-white ml-2">Mais Popular</Badge>
-                  )}
+                  <div className="flex flex-col gap-1 items-end">
+                    {option.popular && (
+                      <Badge className="bg-orange-500 text-white">Mais Popular</Badge>
+                    )}
+                    {option.badge && (
+                      <Badge className={`${option.badgeColor} text-white`}>{option.badge}</Badge>
+                    )}
+                  </div>
                 </div>
               </div>
             </SelectItem>

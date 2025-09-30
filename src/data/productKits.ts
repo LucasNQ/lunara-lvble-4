@@ -105,12 +105,12 @@ export const productKits: Record<number, ProductOption[]> = {
     },
     {
       id: "3-kits",
-      label: "2 Kits SOS Crescimento (80 dias) + Shampoo, Tônico e Óleo de Brinde",
+      label: "2 Kits SOS Crescimento + 3 Brindes (80 dias)",
       price: 299.00,
       originalPrice: 345.00,
       discount: "Economia de R$ 46,00",
       badge: "Combo Promocional",
-      badgeColor: "orange",
+      badgeColor: "bg-orange-500",
       checkoutLink: 'https://ev.braip.com/ref?pl=pla0wk4m&ck=cheon6kw&af=afig57gg5o'
     }
   ],

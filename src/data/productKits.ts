@@ -5,27 +5,21 @@ export const productKits: Record<number, ProductOption[]> = {
   10: [
     {
       id: "1-unit",
-      label: "1 Pente Alisador",
+      label: "1x Pente Alisador",
       price: 109.99,
       originalPrice: 159.90,
+      discount: "Economia de R$ 49,91",
       checkoutLink: 'https://app.coinzz.com.br/checkout/1-pente-por-10999-0/686064d3cfacb'
     },
     {
       id: "2-units",
-      label: "2 Pentes Alisadores",
-      price: 189.99,
-      originalPrice: 319.80,
-      discount: "Economia de R$ 129,81",
-      popular: true,
-      checkoutLink: 'https://app.coinzz.com.br/checkout/2-pentes-por-18999-0/686064d3cfacb'
-    },
-    {
-      id: "3-units",
-      label: "3 Pentes Alisadores + Brinde",
-      price: 249.99,
-      originalPrice: 479.70,
-      discount: "Economia de R$ 229,71 + Brinde Grátis",
-      checkoutLink: 'https://app.coinzz.com.br/checkout/3-pentes-por-24999-0/686064d3cfacb'
+      label: "2x Pente Alisador",
+      price: 159.99,
+      originalPrice: 189.99,
+      discount: "Economia de R$ 30,00",
+      badge: "Oferta limitada",
+      badgeColor: "bg-orange-500",
+      checkoutLink: 'https://app.coinzz.com.br/checkout/2-pentes-por-15999-0/686064d3cfacb'
     }
   ],
 
@@ -33,27 +27,29 @@ export const productKits: Record<number, ProductOption[]> = {
   4: [
     {
       id: "1-unit",
-      label: "1 Progressiva Vegetal (500ml)",
+      label: "1x Progressiva Vegetal (500ml)",
       price: 150.00,
       originalPrice: 197.00,
-      checkoutLink: 'https://app.coinzz.com.br/checkout/prog-150-57/6855d3d1b5816'
+      discount: "Economia de R$ 47,00",
+      checkoutLink: 'https://app.coinzz.com.br/checkout/prog-150-0/6855d3d1b5816'
     },
     {
       id: "2-units",
-      label: "2 Progressivas Vegetais",
-      price: 270.00,
-      originalPrice: 394.00,
-      discount: "Economia de R$ 124,00",
-      popular: true,
-      checkoutLink: 'https://app.coinzz.com.br/checkout/2-prog-270-0/6855d3d1b5816'
+      label: "2x Progressiva Vegetal (500ml)",
+      price: 220.00,
+      originalPrice: 277.00,
+      discount: "Economia de R$ 57,00",
+      badge: "Promoção",
+      badgeColor: "bg-green-500",
+      checkoutLink: 'https://app.coinzz.com.br/checkout/2-prog-220-0/6855d3d1b5816'
     },
     {
-      id: "kit-completo",
-      label: "Kit Completo: 2 Progressivas + Shampoo Preparador",
-      price: 320.00,
-      originalPrice: 450.00,
-      discount: "Economia de R$ 130,00 + Shampoo Grátis",
-      checkoutLink: 'https://app.coinzz.com.br/checkout/kit-prog-320-0/6855d3d1b5816'
+      id: "3-units",
+      label: "3x Progressiva Vegetal (500ml)",
+      price: 291.00,
+      originalPrice: 330.00,
+      discount: "Economia de R$ 39,00",
+      checkoutLink: 'https://app.coinzz.com.br/checkout/3-prog-291-0/6855d3d1b5816'
     }
   ],
 
@@ -61,27 +57,29 @@ export const productKits: Record<number, ProductOption[]> = {
   11: [
     {
       id: "1-unit",
-      label: "1 Máscara Karseell (500g)",
-      price: 160.00,
+      label: "1x Máscara Karseell (500g) + Brinde",
+      price: 170.00,
       originalPrice: 189.00,
-      checkoutLink: 'https://pay.braip.co/ref?pl=playgege&ck=che4615q&af=afixj79yne'
+      discount: "Economia de R$ 19,00",
+      checkoutLink: 'https://ev.braip.com/ref?pl=playgege&ck=che4615q&af=afixj79yne'
     },
     {
       id: "2-units",
-      label: "2 Máscaras Karseell",
-      price: 280.00,
-      originalPrice: 378.00,
-      discount: "Economia de R$ 98,00",
-      popular: true,
-      checkoutLink: 'https://pay.braip.co/ref?pl=playgege2&ck=che4615q&af=afixj79yne'
+      label: "2x Máscara Karseell (500g) + Brinde",
+      price: 240.00,
+      originalPrice: 297.90,
+      discount: "Economia de R$ 57,90",
+      badge: "Mais Vendido",
+      badgeColor: "bg-yellow-500",
+      checkoutLink: 'https://ev.braip.com/ref?pl=plar6ozr&ck=che4615q&af=afixj79yne'
     },
     {
-      id: "kit-tratamento",
-      label: "Kit Tratamento: 2 Máscaras + Óleo Reparador",
-      price: 320.00,
-      originalPrice: 420.00,
-      discount: "Economia de R$ 100,00 + Óleo Grátis",
-      checkoutLink: 'https://pay.braip.co/ref?pl=playgegekit&ck=che4615q&af=afixj79yne'
+      id: "3-units",
+      label: "3x Máscara Karseell (500g) + Brinde",
+      price: 330.00,
+      originalPrice: 409.99,
+      discount: "Economia de R$ 79,99",
+      checkoutLink: 'https://ev.braip.com/ref?pl=plakg68l&ck=che4615q&af=afixj79yne'
     }
   ],
 

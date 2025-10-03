@@ -87,7 +87,7 @@ export const productKits: Record<number, ProductOption[]> = {
   12: [
     {
       id: "1-kit",
-      label: "1 Kit SOS Crescimento (30 dias)",
+      label: "1x Kit SOS Crescimento (1 Mês de Tratamento)",
       price: 179.00,
       originalPrice: 229.00,
       discount: "Economia de R$ 50,00",
@@ -95,7 +95,7 @@ export const productKits: Record<number, ProductOption[]> = {
     },
     {
       id: "2-kits",
-      label: "2 Kits SOS Crescimento (60 dias)",
+      label: "2x Kits SOS Crescimento (2 Meses de Tratamento)",
       price: 279.00,
       originalPrice: 307.00,
       discount: "Economia de R$ 28,00",
@@ -103,12 +103,12 @@ export const productKits: Record<number, ProductOption[]> = {
     },
     {
       id: "3-kits",
-      label: "2 Kits SOS Crescimento + 3 Brindes (80 dias)",
+      label: "2x Kits SOS Crescimento (3 Meses de Tratamento)",
       price: 299.00,
       originalPrice: 345.00,
       discount: "Economia de R$ 46,00",
       badge: "Combo Promocional",
-      badgeColor: "bg-orange-500",
+      badgeColor: "bg-red-500",
       checkoutLink: 'https://ev.braip.com/ref?pl=pla0wk4m&ck=cheon6kw&af=afig57gg5o'
     }
   ],

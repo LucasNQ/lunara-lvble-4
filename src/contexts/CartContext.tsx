@@ -19,6 +19,7 @@ export interface Product {
   customButtonText?: string;
   extraInfo?: string;
   checkoutLink?: string;
+  initialQuantity?: number;
 }
 
 export interface CartItem extends Product {
@@ -62,7 +63,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         // Don't add if product already exists - each product can only be bought once
         return prevItems;
       } else {
-        return [...prevItems, { ...product, quantity: 1 }];
+        return [...prevItems, { ...product, quantity: product.initialQuantity || 1 }];
       }
     });
     setIsDrawerOpen(true); // Automatically open drawer when adding to cart

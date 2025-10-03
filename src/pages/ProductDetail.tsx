@@ -37,6 +37,10 @@ const ProductDetail = () => {
   }
 
   const handleAddToCart = () => {
+    // Extract quantity from option label (e.g., "2x Kits..." -> 2)
+    const quantityMatch = selectedOption.label.match(/^(\d+)x/);
+    const initialQuantity = quantityMatch ? parseInt(quantityMatch[1]) : 1;
+    
     // Create a modified product with selected option data and unique identifier
     const productToAdd = {
       ...product,
@@ -44,7 +48,8 @@ const ProductDetail = () => {
       name: selectedOption.label,
       price: selectedOption.price,
       originalPrice: selectedOption.originalPrice,
-      selectedOptionId: selectedOption.id // Store the option ID for reference
+      selectedOptionId: selectedOption.id, // Store the option ID for reference
+      initialQuantity
     };
     addToCart(productToAdd);
   };

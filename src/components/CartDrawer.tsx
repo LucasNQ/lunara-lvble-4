@@ -112,15 +112,14 @@ const CartDrawer = () => {
                    <h3 className="font-semibold text-sm leading-tight mb-1 break-words">
                      {item.name}
                    </h3>
-                   <div className="flex items-center gap-2 mb-1">
-                     <p className="text-red-600 font-bold text-base">
-                       R$ {item.price.toFixed(2).replace('.', ',')}
-                     </p>
-                     <p className="text-gray-500 text-sm line-through">
-                       R$ {item.originalPrice.toFixed(2).replace('.', ',')}
-                     </p>
-                   </div>
-                   <p className="text-gray-600 text-xs">Qtd: 1</p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-red-600 font-bold text-base">
+                        R$ {item.price.toFixed(2).replace('.', ',')}
+                      </p>
+                      <p className="text-gray-500 text-sm line-through">
+                        R$ {item.originalPrice.toFixed(2).replace('.', ',')}
+                      </p>
+                    </div>
                  </div>
                  
                  <Button

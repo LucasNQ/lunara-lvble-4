@@ -149,6 +149,9 @@ const ProductDetail = () => {
                         R$ {product.originalPrice.toFixed(2).replace('.', ',')}
                       </span>
                     </div>
+                    <div className="text-sm text-gray-600">
+                      R$ {product.price.toFixed(2).replace('.', ',')} à vista
+                    </div>
                     <div className="text-green-600 font-semibold text-lg">
                       Economia de R$ {(product.originalPrice - product.price).toFixed(2).replace('.', ',')}
                     </div>

@@ -94,6 +94,9 @@ const ProductQuantitySelector = ({
             <div className="text-2xl font-bold text-pink-600">
               R$ {selectedOption.price.toFixed(2).replace('.', ',')}
             </div>
+            <div className="text-xs text-gray-600 mt-0.5">
+              R$ {selectedOption.price.toFixed(2).replace('.', ',')} à vista
+            </div>
             <div className="text-sm text-gray-500 line-through">
               R$ {selectedOption.originalPrice.toFixed(2).replace('.', ',')}
             </div>

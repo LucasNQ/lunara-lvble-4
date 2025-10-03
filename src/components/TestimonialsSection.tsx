@@ -139,6 +139,23 @@ const TestimonialsSection = () => {
               </div>
             </div>
           </div>
+
+          {/* Contact CTA */}
+          <div className="text-center mt-12 fade-in fade-in-delay-3">
+            <p className="text-gray-600 mb-6">
+              Ainda tem dúvidas? Nossa equipe está pronta para ajudar!
+            </p>
+            <div className="flex justify-center">
+              <a
+                href="https://wa.me/5531984723813?text=Oi!+Estava+no+site+da+Lunara+e+estou+com+algumas+dúvidas.+Voc%C3%AA+pode+me+ajudar?+"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 inline-block"
+              >
+                💬 Falar no WhatsApp
+              </a>
+            </div>
+          </div>
           
         </div>
       </div>

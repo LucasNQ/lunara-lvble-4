@@ -5,7 +5,6 @@ import HeroSection from '@/components/HeroSection';
 import ProductsSection from '@/components/ProductsSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
 import FloatingWhatsAppButton from '@/components/FloatingWhatsAppButton';
@@ -48,7 +47,6 @@ const Index = () => {
           <ProductsSection />
           <BenefitsSection />
           <TestimonialsSection />
-          <FAQSection />
         </main>
         <Footer />
         <FloatingWhatsAppButton />

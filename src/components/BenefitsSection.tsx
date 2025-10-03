@@ -43,10 +43,6 @@ const BenefitsSection = () => {
     title: 'Segurança Garantida',
     description: 'Aprovado e testado pela Anvisa'
   }, {
-    icon: HourglassIcon,
-    title: 'Durabilidade Avançada',
-    description: 'Resultados que permanecem por muito mais tempo'
-  }, {
     icon: TruckIcon,
     title: 'Frete Grátis',
     description: 'Frete grátis e entrega rápida em todo Brasil'
@@ -69,7 +65,7 @@ const BenefitsSection = () => {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {benefits.map((benefit, index) => {
           const IconComponent = benefit.icon;
           return <div key={index} className={`group p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 fade-in fade-in-delay-${index % 3 + 1}`}>

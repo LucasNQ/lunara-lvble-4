@@ -37,12 +37,14 @@ const ProductDetail = () => {
   }
 
   const handleAddToCart = () => {
-    // Create a modified product with selected option data
+    // Create a modified product with selected option data and unique identifier
     const productToAdd = {
       ...product,
+      id: Number(`${product.id}${selectedOption.id.replace(/\D/g, '')}`), // Create unique ID based on product + option
       name: selectedOption.label,
       price: selectedOption.price,
-      originalPrice: selectedOption.originalPrice
+      originalPrice: selectedOption.originalPrice,
+      selectedOptionId: selectedOption.id // Store the option ID for reference
     };
     addToCart(productToAdd);
   };

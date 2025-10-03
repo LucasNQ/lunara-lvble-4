@@ -73,7 +73,7 @@ export const useProducts = () => {
     {
       id: 11,
       name: "Máscara Karseell Original Collagen - 500g",
-      price: 160.00,
+      price: 170.00,
       originalPrice: 189.00,
       image: "/lovable-uploads/6d30666c-b4ce-498e-addb-c1d7b76ad4e9.png",
       category: "Cabelos",

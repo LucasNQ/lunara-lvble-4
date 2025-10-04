@@ -55,51 +55,6 @@ const ProductCard = ({ product, priority = false }: ProductCardProps) => {
           {product.name}
         </h3>
 
-        {/* Product minicopy or fallback descriptions */}
-        {product.minicopy ? (
-          <p className="text-sm text-gray-600 mb-3 italic">
-            {product.minicopy}
-          </p>
-        ) : (
-          <>
-            {product.id === 6 && (
-              <p className="text-sm text-gray-600 mb-3 italic">
-                ✨ Pele uniforme e iluminada em poucas semanas
-              </p>
-            )}
-            {product.id === 2 && (
-              <p className="text-sm text-gray-600 mb-3 italic">
-                💖 Fios mais fortes, pele radiante e unhas resistentes
-              </p>
-            )}
-            {product.id === 4 && (
-              <p className="text-sm text-gray-600 mb-3 italic">
-                💆‍♀️ Cabelos lisos, sem frizz, com brilho de salão — sem formol
-              </p>
-            )}
-            {product.id === 10 && (
-              <p className="text-sm text-gray-600 mb-3 italic">
-                ✨ Cabelos lisos em minutos, em casa ou onde você estiver.
-              </p>
-            )}
-            {product.id === 8 && (
-              <p className="text-sm text-gray-600 mb-3 italic">
-                💄 Depilação facial rápida, sem dor e sem irritação, cabe na sua bolsa.
-              </p>
-            )}
-            {product.id === 3 && (
-              <p className="text-sm text-gray-600 mb-3 italic">
-                🫦 Mais conforto, hidratação e prazer na sua rotina íntima.
-              </p>
-            )}
-            {product.id === 5 && (
-              <p className="text-sm text-gray-600 mb-3 italic">
-                🌷 Um só aparelho para depilar cada parte do corpo sem dor e sem cortes.
-              </p>
-            )}
-          </>
-        )}
-
         {/* Rating */}
         <div className="flex items-center gap-2 mb-3">
           <div className="flex items-center">
@@ -134,21 +89,6 @@ const ProductCard = ({ product, priority = false }: ProductCardProps) => {
             <span className="text-xs sm:text-sm text-green-600 font-medium">
               | Economize R$ {(product.originalPrice - product.price).toFixed(2).replace('.', ',')}
             </span>
-          </div>
-          
-          {/* Additional info for specific products */}
-          <div className="space-y-1">
-            <div className="text-xs text-gray-600 flex items-center gap-1">
-              🚚 <span>Frete Grátis Brasil</span>
-            </div>
-            <div className="text-xs text-gray-600 flex items-center gap-1">
-              ✅ <span>Garantia 7 dias</span>
-            </div>
-            {product.extraInfo && (
-              <div className="text-xs text-amber-600 font-medium flex items-center gap-1">
-                <span>{product.extraInfo}</span>
-              </div>
-            )}
           </div>
         </div>
       </CardContent>

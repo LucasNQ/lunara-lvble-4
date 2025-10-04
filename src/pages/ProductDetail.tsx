@@ -156,7 +156,7 @@ const ProductDetail = () => {
                       Economia de R$ {(product.originalPrice - product.price).toFixed(2).replace('.', ',')}
                     </div>
                     <div className="text-sm text-gray-600">
-                      ou parcelado em até 12x
+                      À vista, ou parcelado em até 12x
                     </div>
                   </div>
                 )}

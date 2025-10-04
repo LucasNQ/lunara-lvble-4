@@ -89,13 +89,22 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /* Prevent horizontal scroll */
     overflow-x: hidden;
     /* Ensure minimum width for readability */
     min-width: 320px;
+  }
+
+  /* Typography Hierarchy */
+  h1, h2, h3, h4 {
+    font-family: 'Petrona', serif;
+  }
+
+  p, span, button, a, input, textarea, select, label {
+    font-family: 'DM Sans', sans-serif;
   }
 
   /* Responsive font sizes */
@@ -224,12 +233,12 @@
   }
 
   .btn-gradient {
-    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    background: #ec4899 !important;
     transition: all 0.2s ease;
   }
 
   .btn-gradient:hover {
-    background: linear-gradient(135deg, #be185d, #7c3aed);
+    background: #be185d !important;
     transform: translateY(-1px);
     box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
   }

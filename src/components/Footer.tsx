@@ -3,46 +3,45 @@ import { Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import OptimizedImage from './OptimizedImage';
 const Footer = () => {
-  return <footer id="contato" className="bg-gray-900 text-white">
+  return <footer id="contato" style={{ backgroundColor: '#935aee' }} className="text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-6 sm:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {/* Brand Section with Images */}
+          {/* Brand Section */}
           <div className="space-y-3 text-center sm:text-left">
-            {/* Payment and Security Images */}
-            <div className="flex flex-col xs:flex-row gap-2 justify-center sm:justify-start items-center mb-3">
-              <div className="flex-1 max-w-[160px]">
-                <OptimizedImage src="/lovable-uploads/06986a20-883a-4d38-afa4-b5f694d0fd8b.png" alt="Formas de pagamento aceitas - Cartão de crédito, débito, PIX, boleto" className="w-full h-auto object-contain" width={160} height={60} />
-              </div>
-              <div className="flex-1 max-w-[160px]">
-                <OptimizedImage src="/lovable-uploads/ca1b7555-db20-4722-919f-2cc877971cb6.png" alt="Site seguro com certificado SSL e verificado pelo Google" className="w-full h-auto object-contain" width={160} height={60} />
-              </div>
-            </div>
-
-            <h3 className="text-xl sm:text-2xl font-bold text-gradient">Lunara</h3>
-            <p className="text-gray-400 leading-relaxed text-sm sm:text-base px-2 sm:px-0">Aqui você cuida da sua beleza com praticidade, economia e garantia de satisfação.</p>
+            <h3 className="text-xl sm:text-2xl font-bold">Lunara</h3>
+            <p className="text-white/80 leading-relaxed text-sm sm:text-base px-2 sm:px-0">Aqui você cuida da sua beleza com praticidade, economia e garantia de satisfação.</p>
             <div className="flex space-x-3 justify-center sm:justify-start pt-2">
-              <a href="https://www.facebook.com/profile.php?id=61574815833708" target="_blank" rel="noopener noreferrer" className="w-9 h-9 sm:w-10 sm:h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61574815833708" target="_blank" rel="noopener noreferrer" className="w-9 h-9 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors" aria-label="Facebook">
                 <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
-              <a href="https://www.instagram.com/lunaracosmeticos.store?igsh=ZWVvMjVremhsM280" target="_blank" rel="noopener noreferrer" className="w-9 h-9 sm:w-10 sm:h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/lunaracosmeticos.store?igsh=ZWVvMjVremhsM280" target="_blank" rel="noopener noreferrer" className="w-9 h-9 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors" aria-label="Instagram">
                 <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
 
-
-          {/* Support */}
+          {/* Formas de pagamento */}
           <div className="space-y-4 text-center sm:text-left">
-            <h4 className="text-base sm:text-lg font-semibold">Suporte</h4>
-            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-              <li>
-                <a href="https://wa.me/5531984723813?text=Oi!+Estava+no+site+da+Lunara+e+estou+com+algumas+d%C3%BAvidas.+Voc%C3%AA+pode+me+ajudar?+" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition-colors inline-block py-1">Suporte WhatsApp</a>
-              </li>
-              
-              
-              
-            </ul>
+            <h4 className="text-base sm:text-lg font-semibold">Formas de pagamento</h4>
+            <div className="flex justify-center sm:justify-start">
+              <div className="max-w-[200px]">
+                <OptimizedImage src="/lovable-uploads/payment-methods.webp" alt="Formas de pagamento aceitas - Visa, Mastercard, American Express, Diners, Elo, Alelo, Hipercard, Banco do Brasil, PIX, Boleto" className="w-full h-auto object-contain" width={200} height={120} />
+              </div>
+            </div>
+          </div>
+
+          {/* Segurança */}
+          <div className="space-y-4 text-center sm:text-left">
+            <h4 className="text-base sm:text-lg font-semibold">Segurança</h4>
+            <div className="flex gap-2 justify-center sm:justify-start items-center">
+              <div className="max-w-[140px]">
+                <OptimizedImage src="/lovable-uploads/google-safe.webp" alt="Site seguro com certificado SSL 256 bits e Google Safe Browsing" className="w-full h-auto object-contain" width={140} height={60} />
+              </div>
+              <div className="max-w-[80px]">
+                <OptimizedImage src="/lovable-uploads/reclame-aqui.webp" alt="Verificada por Reclame Aqui" className="w-full h-auto object-contain" width={80} height={40} />
+              </div>
+            </div>
           </div>
 
           {/* Contact */}
@@ -67,20 +66,20 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-white/20">
         <div className="container mx-auto px-6 sm:px-8 py-4 sm:py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
+            <div className="text-white/80 text-xs sm:text-sm text-center sm:text-left">
               © 2025 Lunara. Todos os direitos reservados.
             </div>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-400">
-              <Link to="/privacy-policy" className="hover:text-pink-400 transition-colors py-1">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-white/80">
+              <Link to="/privacy-policy" className="hover:text-white transition-colors py-1">
                 Política de Privacidade
               </Link>
-              <Link to="/terms-of-service" className="hover:text-pink-400 transition-colors py-1">
+              <Link to="/terms-of-service" className="hover:text-white transition-colors py-1">
                 Termos de Uso
               </Link>
-              <Link to="/cookies" className="hover:text-pink-400 transition-colors py-1">
+              <Link to="/cookies" className="hover:text-white transition-colors py-1">
                 Cookies
               </Link>
             </div>

@@ -3,7 +3,7 @@ import OptimizedImage from './OptimizedImage';
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative gradient-bg overflow-hidden min-h-[70vh] md:min-h-[50vh] lg:min-h-[60vh] flex items-center">
+    <section id="inicio" className="relative gradient-bg overflow-hidden min-h-[100vh] xs:min-h-[90vh] sm:min-h-[80vh] md:min-h-[50vh] lg:min-h-[60vh] flex items-center">
       {/* Background Pattern - Optimized for performance */}
       <div className="absolute inset-0 opacity-10" aria-hidden="true">
         <div className="absolute top-20 left-2 sm:left-4 md:left-10 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -15,8 +15,8 @@ const HeroSection = () => {
         }}></div>
       </div>
 
-      <div className="w-full relative z-10">
-        <div className="w-full fade-in">
+      <div className="w-full h-full relative z-10">
+        <div className="w-full h-full fade-in">
           <OptimizedImage 
             src="/lovable-uploads/55505b55-7b7f-4725-a602-48eec7ae7b42.png" 
             alt="Mulher com cabelo liso e saudável usando produtos Lunara" 

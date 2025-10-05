@@ -15,12 +15,12 @@ const HeroSection = () => {
         }}></div>
       </div>
 
-      <div className="w-full relative z-10">
-        <div className="w-full fade-in">
+      <div className="w-full relative z-10 h-full">
+        <div className="w-full fade-in h-full min-h-full">
           <OptimizedImage 
             src="/lovable-uploads/55505b55-7b7f-4725-a602-48eec7ae7b42.png" 
             alt="Mulher com cabelo liso e saudável usando produtos Lunara" 
-            className="w-full h-full object-cover md:object-contain md:max-h-[60vh] lg:max-h-[70vh]" 
+            className="w-full h-full object-cover" 
             width={1200} 
             height={1600} 
             priority={true} 

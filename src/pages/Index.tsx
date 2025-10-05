@@ -42,7 +42,7 @@ const Index = () => {
           keywords="produtos cabelo, progressiva sem formol, alisamento, cuidados capilares, beleza, cosmética, pente alisador, gummy cabelo"
         />
         <Header />
-        <main>
+        <main className="pt-20 sm:pt-24 md:pt-28">
           <HeroSection />
           <ProductsSection />
           <BenefitsSection />

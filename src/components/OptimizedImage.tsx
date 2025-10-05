@@ -33,14 +33,14 @@ const OptimizedImage = ({
   };
 
   return (
-    <div className="relative overflow-hidden w-full h-full flex items-center justify-center">
+    <div className="relative overflow-hidden w-full h-full">
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-100 animate-pulse rounded" />
+        <div className="absolute inset-0 bg-gray-100 animate-pulse" />
       )}
       <img
         src={imageError ? fallbackSrc : src}
         alt={alt}
-        className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300 max-w-full max-h-full object-contain`}
+        className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300 w-full h-full`}
         width={width}
         height={height}
         loading={priority ? 'eager' : 'lazy'}

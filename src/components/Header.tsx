@@ -106,7 +106,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/logo-lunara.png" 
                 alt="Lunara Cosméticos"
-                className="h-16 sm:h-20 md:h-24 w-auto object-contain"
+                className="h-[4.5rem] sm:h-20 md:h-24 w-auto object-contain"
               />
             </button>
           </div>

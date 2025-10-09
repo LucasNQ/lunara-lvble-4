@@ -104,7 +104,7 @@ const Header = () => {
               className="hover:opacity-80 transition-opacity"
             >
               <img 
-                src="/lovable-uploads/5f59a910-de6e-417b-917f-15a0f011ea54.png" 
+                src="/lovable-uploads/logo-lunara.png" 
                 alt="Lunara Cosméticos"
                 className="h-16 sm:h-20 md:h-24 w-auto object-contain"
               />
